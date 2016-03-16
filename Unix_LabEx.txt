@@ -1,0 +1,14 @@
+- find catalinaout file in /var directory
+find /var -name "catalina.out"
+
+- List "SEVERE" errors in catalina.out file
+grep "SEVERE" catalina.out
+
+- Count the SEVERE errors
+grep -c "SEVERE" catalina.out
+
+- List "SEVERE" errors that do not contain "RELYING" in the error.
+grep "SEVERE" catalina.out | grep -v "RELYING"
+
+- Show the 50 lines following the "SEVERE" errors found above.
+grep -a 50 "SEVERE" catalina.out
